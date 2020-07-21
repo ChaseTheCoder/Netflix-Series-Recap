@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/app.js"></script>
+    <title>Netflix Series Recap</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#meals" class="nav-link">
+                        Meals
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="order" class="container">
+            <h2>Order Now</h2>
+            <form class="contact-me" novalidate>
+                <label class="f name">
+                    <div class="error-message hidden">
+                        I'm an error!
+                    </div>
+                    First Name:<br>
+                    <input type="text" name="fName" value="" placeholder="first name">
+                </label>
+                <label class="l name">
+                    <div class="error-message hidden"></div>
+                    Last Name:<br>
+                    <input type="text" name="lName" value="" placeholder="last">
+                </label>
+                <label class="email">
+                    <div class="error-message hidden"></div>
+                    Email:<br>
+                    <input type="email" name="email" value="" placeholder="email">
+                </label>
+                <label class="credit">
+                    <div class="error-message hidden"></div>
+                    Credit Card:<br>
+                    <input type="text" name="credit" value="" placeholder="credit card">
+                </label>
+                <label class="ccv">
+                    <div class="error-message hidden"></div>
+                    CCV:<br>
+                    <input type="text" name="ccv" value="" placeholder="ccv">
+                </label>
+                <label class="bulkText">
+                    <div class="error-message hidden"></div>
+                    Message:<br>
+                    <textarea name="message" rows="4" placeholder="Enter your message here"></textarea>
+                </label>
+                <button type="submit" class="sendBut" name="send">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
