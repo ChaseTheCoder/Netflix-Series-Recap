@@ -1,0 +1,17 @@
+body {
+    background-color: aqua;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo {
+    justify-self: left;
+}
+
+.nav-group {
+    display: flex;
+    flex-direction: row;
+}
