@@ -10,8 +10,12 @@ app.use(express.urlencoded({extended: false}));
 //----- Routes
 
 app.get('/', (req, res) => {
-    res.send(console.log('this is a landing page'))  
+    res.render('index');
 });
+
+app.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+})
 
 
 
