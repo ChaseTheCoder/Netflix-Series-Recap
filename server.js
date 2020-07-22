@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
 const db = require('./models');
-const USERS = require('./models/Users');
+const bodyParser = require('body-parser');
 app.set('view engine', 'ejs');
 
 //----- Middleware
 
 app.use(express.static(`${__dirname}/public`)); 
 app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 
 //----- Routes
@@ -21,8 +22,8 @@ app.post('/', (req, res) => {
     db.Users.create(req.body, (err, newUser) => {
         if (err) return console.log(err);  
         console.log(newUser);
+        res.json(newUser);
     });
-    res.redirect('/');
 });
 
 app.get('/dashboard', (req, res) => {
