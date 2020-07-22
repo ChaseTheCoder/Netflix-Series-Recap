@@ -9,6 +9,14 @@ body {
 h1{
     color: white;
 }
+h2{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
 
 /* NAV
 ************************************ */
@@ -101,16 +109,59 @@ button:hover{
     }
 }
 
+/* ======= HERO =========== */
+.hero {
+    background: url('https://www.wsav.com/wp-content/uploads/sites/75/2019/06/OZARK20NETFLIX_1559761155721.jpg_90864123_ver1.0.jpg?w=1024&h=576&crop=1');
+    background-position: top center ;
+    background-size: cover;
+    /* cover takes our image */
+    max-width: 100vw;
+    height: 70vh;
+}
 
-/* .logo {
+.title {
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 600px;
+    padding: 5%;
     position: relative;
-    justify-self: left;
-} */
+    top: 20%;
+    left: 10%;
+}
 
-/* .nav-group {
-    display: flex;
-    flex-direction: row;
-}  */
+.title h1 {
+    font-size: 4em;
+    margin-top: -10%;
+}
+
+
+/* ======= MOVIE/TV SHOW CAROUSEL =========== */
+.carousel {
+    width: 100%;
+    height: 100px;
+    overflow: visible;
+    white-space:nowrap;
+}
+
+.carousel img {
+    display: inline-block;
+    height: 200px;
+    width: 300px;
+    margin: 20px;
+    opacity: 0.8;
+    transition: ease-in-out .3s;
+}
+.carousel img:hover {
+    opacity: 1;
+  transform: scale(1.35);
+  cursor: pointer;
+}
+
+/* ======= MOVIE CARDS =========== */
+
+
+
+
+
 
 
 
