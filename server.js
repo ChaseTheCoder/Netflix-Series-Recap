@@ -25,7 +25,6 @@ app.post('/', (req, res) => {
 });
 
 app.get('/dashboard', (req, res) => {
-    res.render('dashboard');
     db.Users.find({}, (err, allUsers) => {
         if (err) return console.log(err);  
         res.render('dashboard', {
