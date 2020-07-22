@@ -25,8 +25,10 @@ const validateInput = element => {
 const contactEl = document.querySelector('.landing-form');
 contactEl.addEventListener('submit', e => {
     e.preventDefault();
+    const form = {}
     let allInputValid = true;
     contactEl.querySelectorAll('input, textarea').forEach(el => {
+        console.log('pizza');
         //   let errorEl = el.parentElement.firstElementChild;
         let validationResponse = validateInput(el);
         if (!validationResponse.isValid) {
@@ -34,13 +36,19 @@ contactEl.addEventListener('submit', e => {
             el.classList.add('error');
             // errorEl.classList.remove('hidden', 'opaque');
             // errorEl.innerText = validationResponse.message;
-        } //else {
-        //     el.classList.remove('error');
-        //     errorEl.classList.add('hidden');
-        //   }
+        } else {
+            form[el.name] = el.value;
+          }
     })
     if (allInputValid) {
-        console.log('Welcome to the Dashboard');
+        console.log(form);
+        fetch("/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            }, 
+            body: JSON.stringify(form)
+        }).then(data => data.json()).then(data => console.log('newUser', data))
     }
 })
 

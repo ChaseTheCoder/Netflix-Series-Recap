@@ -14,7 +14,7 @@ h2{
     color: white;
 }
 
-p{
+p, tr, th {
     color: white;
 }
 
@@ -164,5 +164,18 @@ button:hover{
 
 /* ======= MOVIE CARDS Carousel =========== */
 
-  
-  
+
+/* ======= DASHBOARD =========== */
+table {
+    width: 70%;
+    margin-left: auto; 
+    margin-right: auto;
+}
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
