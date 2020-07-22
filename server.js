@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const db = require('./models');
+const USERS = require('./models/Users');
 app.set('view engine', 'ejs');
 
 //----- Middleware
@@ -38,6 +39,7 @@ app.get('/dashboard', (req, res) => {
 app.get('*', (req, res) => {
     res.send("<h1>These are not the pages you're looking for</h1>")
 });
+
 
 //----- Server Listener
 
