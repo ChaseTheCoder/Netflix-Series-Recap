@@ -44,7 +44,7 @@ contactEl.addEventListener('submit', e => {
     let allInputValid = true;
     contactEl.querySelectorAll('input, textarea').forEach(el => {
         console.log('pizza');
-        let errorEl = el.parentElement.firstElementChild;
+        // let errorEl = el.parentElement.firstElementChild;
         let validationResponse = validateInput(el);
         if (!validationResponse.isValid) {
             allInputValid = false;
@@ -67,11 +67,11 @@ contactEl.addEventListener('submit', e => {
     }
 })
 
-  document.querySelectorAll('input, textarea').forEach(el => {
-    el.addEventListener('focus', el => {
-      el.parentElement.firstElementChild.classList.add('opaque');
-    })
-  })
+//   document.querySelectorAll('input, textarea').forEach(el => {
+//     el.addEventListener('focus', el => {
+//       el.parentElement.firstElementChild.classList.add('opaque');
+//     })
+//   })
 
 
 
