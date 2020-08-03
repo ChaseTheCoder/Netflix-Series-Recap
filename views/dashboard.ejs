@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/app.js"></script>
+    <link rel="icon" href="https://fhsknightlife.com/wp-content/uploads/2020/04/uVASXqvMzyUrAPfSn9pMtxOC7s89ulzdDKBdtqCP.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <title>Netflix Recap</title>
+</head>
+</head>
+<body>
+    <header>
+
+        <div class="navbar">
+    
+            <!-- Logo and Links -->
+    
+            <div>
+                <img src="https://pmcvariety.files.wordpress.com/2020/05/netflix-logo.png?w=681&h=383&crop=1" alt="logo">
+            </div>
+    
+    
+            <a href="#">AUTHORS</a>
+    
+            <a href="#">ADVERTISERS</a>
+
+            <a href="#">MARKETING</a>
+    
+        </div>
+    </header>
+    <h1>dashboard</h1>
+
+
+        <table class="table" style="width:50%">
+            <tr>
+              <th>Name</th>
+              <th>Email</th> 
+              <th>Date Signed Up</th> 
+            </tr>
+            <% if (users.length) { %>
+                <% for (let i = 0; i < users.length; i++) { %>
+            <tr>
+                    <td><%= users[i].name %></td>
+                    <td><%= users[i].email %></td>
+                    <td><%= users[i].timestamp %></td>
+            </tr>
+            <% }}; %> 
+          </table>
+</body>
+</html>
